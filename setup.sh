@@ -17,3 +17,11 @@ if ! grep -q "function ai" ~/.bashrc; then
 else
     echo "The 'ai' function already exists in .bashrc"
 fi
+
+# Create the startup script
+STARTUP_SCRIPT='#!/bin/bash
+source ~/.bashrc'
+
+# Write the startup script to the .bashrc file
+echo "$STARTUP_SCRIPT" >> ~/.bashrc
+echo "Added the startup script to .bashrc"
