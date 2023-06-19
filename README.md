@@ -1,5 +1,5 @@
 # Terminal AI
-A command-line productivity tool powered by OpenAI's GPT models. As developers, we can leverage AI capabilities to generate shell commands, code snippets, comments, and documentation, among other things. Forget about cheat sheets and notes; with this tool, you can get accurate answers right in your terminal, and you'll probably reduce your daily Google searches, saving you valuable time and effort. ShellGPT is cross-platform compatible and supports all major operating systems, including Linux, macOS, and Windows with all major shells, such as PowerShell, CMD, Bash, Zsh, Fish, and many others.
+A fork of SHELL_GPT but with a setup.sh so you can use $ ai in your terminal.
 
 https://user-images.githubusercontent.com/16740832/231569156-a3a9f9d4-18b1-4fff-a6e1-6807651aa894.mp4
 
@@ -11,16 +11,18 @@ You'll need an OpenAI API key, you can generate one [here](https://beta.openai.c
 
 If the`$OPENAI_API_KEY` environment variable is set it will be used, otherwise, you will be prompted for your key which will then be stored in `~/.config/shell_gpt/.sgptrc`.
 
-## Usage
-`sgpt` has a variety of use cases, including simple queries, shell queries, and code queries.
+## Commands
+
+`ai` has a variety of use cases, including simple queries, shell queries, and code queries.
+
 ### Simple queries
 We can use it as normal search engine, asking about anything:
 ```shell
-sgpt "nginx default config file location"
+ai nginx default config file location
 # -> The default configuration file for Nginx is located at /etc/nginx/nginx.conf.
 ```
 ```shell
-sgpt "mass of sun"
+ai mass of the sun
 # -> = 1.99 × 10^30 kg
 ```
 ```shell
@@ -57,14 +59,14 @@ sgpt -s "update my system"
 ```
 The same prompt, when used on Ubuntu, will generate a different suggestion:
 ```shell
-sgpt -s "update my system"
+ai update my system
 # -> sudo apt update && sudo apt upgrade -y
 # -> [E]xecute, [D]escribe, [A]bort: e
 ...
 ```
 We can ask GPT to describe suggested shell command, it will provide a short description of what the command does:
 ```shell
-sgpt -s "show all txt files in current folder"
+ai -s show all txt files in current folder
 # -> ls *.txt
 # -> [E]xecute, [D]escribe, [A]bort: d
 # -> List all files with .txt extension in current directory
@@ -368,7 +370,3 @@ sgpt --chat rainbow "inverse the list of your last answer"
 sgpt --chat rainbow "translate your last answer in french"
 ```
 
-You also can use the provided `Dockerfile` to build your own image:
-```shell
-docker build -t sgpt .
-```
