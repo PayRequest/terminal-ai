@@ -18,18 +18,17 @@ Now you can use ai commands!
 
 
 ## Commands
+Here is a list of commands you can use, of course, you can ask ai anything you want.
 
-`ai` has a variety of use cases, including simple queries, shell queries, and code queries.
-
-### Simple queries
-We can use it as normal search engine, asking about anything:
+### OS
+We can use ai to update your system and more.
 ```shell
-ai nginx default config file location
-# -> The default configuration file for Nginx is located at /etc/nginx/nginx.conf.
+ai update os
+# -> sudo apt update && sudo apt upgrade -y
 ```
 ```shell
-ai mass of the sun
-# -> = 1.99 × 10^30 kg
+ai -s copy file test.php
+# -> cp test.php /destination/folder/
 ```
 ```shell
 sgpt "1 hour and 30 minutes to seconds"
