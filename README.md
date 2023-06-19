@@ -1,7 +1,5 @@
 # Terminal AI
-A fork of SHELL_GPT but with a setup.sh so you can use $ ai in your terminal.
-
-https://user-images.githubusercontent.com/16740832/231569156-a3a9f9d4-18b1-4fff-a6e1-6807651aa894.mp4
+A fork of https://github.com/TheR1D/shell_gpt but with a setup.sh so you can use $ ai in your terminal.
 
 ## Installation
 ```shell
