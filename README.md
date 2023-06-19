@@ -1,13 +1,21 @@
 # Terminal AI
 A fork of https://github.com/TheR1D/shell_gpt but with a setup.sh so you can use $ ai in your terminal.
 
-## Installation
+## Install Shell-GPT
 ```shell
 pip install shell-gpt
 ```
 You'll need an OpenAI API key, you can generate one [here](https://beta.openai.com/account/api-keys).
 
 If the`$OPENAI_API_KEY` environment variable is set it will be used, otherwise, you will be prompted for your key which will then be stored in `~/.config/shell_gpt/.sgptrc`.
+
+## Install AI
+```shell
+bash setup.sh
+```
+
+Now you can use ai commands!
+
 
 ## Commands
 
